@@ -1,10 +1,23 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import {ref} from "vue"
+const newTodo = ref ("")
+function addNewTodo(){
+    console.log("form was submitted")
+    return {
+    addNewTodo,
+    newTodo,
+}
+}
+
 </script>
 
 <template>
+<h1>Vue your todo</h1>
+<form @submit.prevent="addNewTodo"> 
+    <label> New Todo</label>
+    <input v-model="newTodo" name="new-todo"> 
+    <button>Add </button>
+</form>
 
 </template>
 
