@@ -1,9 +1,11 @@
 <script setup>
 
+
 import {ref} from "vue"
- 
+
 const newTodo = ref ("")
 const todos = ref([])
+
    function toggleDone(todo){
             todo.completed = !todo.completed
         }
@@ -23,7 +25,6 @@ function addNewTodo(){
 
         newTodo.value="";
 
-
       
          
     return {
@@ -34,8 +35,6 @@ function addNewTodo(){
     markAllDone
 }
 }
- 
-
 
 
 </script>
